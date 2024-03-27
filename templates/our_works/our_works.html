@@ -1,0 +1,86 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+	OurWorks
+{% endblock %}
+
+{% block content %}
+	    <div class="container p-5 bg-primary text-white text-center">
+            <h3>The United Nations and the UN system work together in five areas that can, and often do overlap</h3>
+        </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>UN's 'work plan'</h4>
+                <br>
+                <p>
+                    At UN Headquarters in New York, the General Assembly, Security Council, and Economic and Social Council pass resolutions, which set what could informally be called the UN's 'work plan.
+                </p>
+                <p>
+                    The UN Secretariat carries out this work along with UN system entities.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h4>UN Secretariat</h4>
+                <br>
+                <p>The UN Secretariat, based in New York City, has offices in Geneva, Vienna, and Nairobi.</p>
+                <p>Also part of the UN Secretariat are the Regional Economic Commissions in Addis Ababa, Bangkok, Beirut, Geneva, and Santiago.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>UN System</h4>
+                <br>
+                <p>
+                    All of the funds, programmes, specialized agencies, and other entities of the UN system have their own budget, mandate, leadership, and headquarters. They have regional and local offices in all the main geographic areas of the world, as does the UN.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="height: 500px">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="{% static 'card1.jpg' %}" alt="" style="width: 300px">
+                        <h4 class="card-title">Documents</h4>
+                        <p class="card-text">
+                            The UN has been publishing documents since its founding. UN documents include records of meetings and resolutions that have been passed by a legislative body, such as the General Assembly, Security Council, or the Economic and Social Council,
+                            which often contain a work mandate for the United Nations. Reports of the UN Secretary-General assess the state of the Organization and announce new work initiatives.
+                        </p>
+                        <a href="https://www.un.org/en/our-work/documents" class="card-link bg-primary">Explore UN documents</a>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="height: 500px">
+                <div class="card-body">
+                    <div class="card-img" >
+                        <img src="{% static 'card2.jpg' %}" alt="" style="width: 300px">
+                        <h4 class="card-title">Official Languages</h4>
+                        <p class="card-text">
+                            There are six official languages of the UN: Arabic, Chinese, English, French, Russian, and Spanish. The correct interpretation and translation of the six languages, in both spoken and written form, is very
+                            important to the work of the Organization, as this enables clear and concise communication on issues of global importance.
+                        </p>
+                        <a href="https://www.un.org/en/our-work/official-languages" class="card-link bg-primary" >More on the 6 official UN languages</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="height: 500px">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="{% static 'img3.jpg' %}" alt="" style="width: 300px">
+                        <h4 class="card-title">United Nations Anniversaries</h4>
+                        <p class="card-text">The United Nations observes milestone anniversaries of key events in its history.</p>
+                        <a href="https://www.un.org/en/observances/un-anniversaries" class="card-link bg-primary">UN Anniversary</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

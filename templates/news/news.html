@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style/news.css' %}">
+{% block title %}
+	Events and News
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+  <div class="heading">
+    <h1 class="heading__title">Events and news</h1>
+  </div>
+    <div class="d-grid">
+            <button type="button" class="btn btn-primary btn-block">
+                {% if user.is_authenticated %}
+                        <a href="{% url 'add_news' %}">Add News</a>
+                {% else %}
+                    <a href="{% url 'register' %}">Add News</a>
+                {% endif %}
+            </button>
+
+    </div>
+  <div class="cards">
+      {% for news in news_list %}
+          <div class="card card-1">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                    <h2 class="card__title">{{ news.title }}</h2>
+                    <p class="card__apply">
+                    <a class="card__link" href="{% url 'news_detail' news.pk %}">More..<i class="fas fa-arrow-right"></i></a>
+                    </p>
+              </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}

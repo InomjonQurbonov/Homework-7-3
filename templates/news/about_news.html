@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	NewsDetails
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid p-5 bg-primary text-white text-center">
+    <h1>{{ new_detail.title }}</h1>
+    <span class="badge bg-info">{{ new_detail.views_count }}</span>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="container">
+        <p>{{ new_detail.content }}</p>
+    </div>
+      <p>{{ new_detail.news_date }}</p>
+  </div>
+</div>
+<div class="d-grid">
+    <button type="button" class="btn btn-warning btn-block">
+        {% if user.is_authenticated %}
+            <a href="{% url 'edit_news' new_detail.pk %}">Edit News</a>
+        {% else %}
+            <a href="{% url 'register' %}">Edit News</a>
+        {% endif %}
+    </button>
+</div>
+<div class="d-grid">
+    <button type="button" class="btn btn-danger btn-block">
+        {% if user.is_authenticated %}
+            <a href="{% url 'delete_news' new_detail.pk %}">Delete News</a>
+        {% else %}
+            <a href="{% url 'register' %}">Delete News</a>
+        {% endif %}
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	AddNews
+{% endblock %}
+
+{% block content %}
+<h1>Add News</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add News" class="btn btn-success">
+    </form>
+{% endblock %}
+
+{% block my_scripts %}
+    <script>
+        $('input').addClass('form-control')
+        $('textarea').addClass('form-control')
+    </script>
+{% endblock %}

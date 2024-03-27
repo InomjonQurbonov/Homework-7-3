@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+	About Us
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+    <h2>United Nations Organization</h2>
+    <p>The United Nations (UN) is an international organization founded in 1945 after the end of World War II. Comprising 193 member states, the UN is committed to promoting peace, security, human rights, and social and economic development globally.</p>
+
+    <h3>Mission:</h3>
+    <p>The primary mission of the United Nations is to maintain international peace and security, foster cooperation among nations, promote sustainable development, and uphold human rights.</p>
+
+    <h3>Structure:</h3>
+    <p>The UN consists of various bodies, including the General Assembly, Security Council, Economic and Social Council, Trusteeship Council, International Court of Justice, and the Secretariat. Each body plays a unique role in advancing the organization's goals.</p>
+
+    <h3>Key Functions:</h3>
+    <ol>
+        <li><strong>Peace and Security:</strong> The Security Council is responsible for maintaining international peace and security. It has the authority to authorize peacekeeping missions and impose sanctions to address threats to peace.</li>
+        <li><strong>Human Rights:</strong> The UN promotes and protects human rights through mechanisms such as the Universal Declaration of Human Rights and various specialized agencies like UNICEF and UNESCO.</li>
+        <li><strong>Sustainable Development:</strong> Through initiatives such as the Sustainable Development Goals (SDGs), the UN aims to eradicate poverty, reduce inequality, and combat climate change to ensure a sustainable future for all.</li>
+        <li><strong>Humanitarian Assistance:</strong> The UN provides humanitarian aid to countries affected by conflicts, natural disasters, and other emergencies through agencies like the World Food Programme and the United Nations High Commissioner for Refugees.</li>
+    </ol>
+
+    <h3>Achievements:</h3>
+    <p>Over the years, the UN has made significant strides in advancing its objectives. Some notable achievements include the establishment of peacekeeping missions in conflict zones, the adoption of landmark international agreements such as the Paris Agreement on climate change, and the eradication of diseases through initiatives like the Global Polio Eradication Initiative.</p>
+
+    <h3>Challenges:</h3>
+    <p>Despite its successes, the UN faces numerous challenges, including conflicts, humanitarian crises, climate change, and the rise of nationalism and protectionism in some parts of the world. Addressing these challenges requires collective action and cooperation among member states.</p>
+
+    <h3>Conclusion:</h3>
+    <p>As the premier global organization dedicated to peace, development, and human rights, the United Nations plays a crucial role in addressing the most pressing challenges facing humanity. By fostering dialogue, promoting cooperation, and mobilizing resources, the UN continues to strive towards a more peaceful, just, and sustainable world for future generations.</p>
+</div>
+
+    <div class="container mt-3">
+        <img src="{% static 'img1.jpg' %}" class="float" alt="Paris" width="304" height="236">
+        <img src="{% static 'img2.jpg' %}" class="float" width="304" height="236">
+        <img src="{% static 'img3.jpg' %}" class="float" alt="Paris" width="304" height="236">
+        <img src="{% static 'img4.jpg' %}" class="float" alt="Paris" width="304" height="236">
+    </div>
+{% endblock %}

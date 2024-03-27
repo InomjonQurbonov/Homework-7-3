@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	OurMembers
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Our Members</h1>
+    </div>
+    <div class="d-grid">
+        <button type="button" class="btn btn-primary btn-block">
+            {% if user.is_authenticated %}
+            	<a href="{% url 'add_members' %}">Add Members</a>
+            {% else %}
+                <a href="{% url 'register' %}">Add Members</a>
+            {% endif %}
+        </button>
+    </div>
+    <br>
+<table class="table table-primary">
+        <tr>
+            <th>№</th>
+            <th>COUNTRY NAME</th>
+            <th>MEMBERS DATE</th>
+            <th>FULL INFORMATION</th>
+        </tr>
+    {% for member in members %}
+    	<tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ member.member_name }}</td>
+            <td>{{ member.add_date }}</td>
+            <td>
+                <a href="{% url 'members_details' member.pk %}">See all infos</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

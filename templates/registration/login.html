@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	LoginPage
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>User login page</h1>
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <input type="submit" class="btn btn-success" value="Log In">
+    </form>
+    <p style="text-align: center" class="text-primary">
+        Don't  remember your password
+        <a href="{% url 'password_reset' %}" class="text-success">Reset Password</a>
+        <br>
+        If you haven't  account
+        <a href="{% url 'register' %}" class="text-success">Register</a>
+    </p>
+{% endblock %}
+
+{% block my_scripts %}
+    <script>
+        $('input').addClass('form-control')
+        $('textarea').addClass('form-control')
+    </script>
+{% endblock %}

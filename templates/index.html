@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+	United Nation Organization
+{% endblock %}
+
+{% block content %}
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" style="width: 100%">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'carousel/carousel1.jpg' %}" alt="bmt" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>United Nation Organization</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'carousel/carousel2.jpg' %}" alt="bmt" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3 >United Nation Organization</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'carousel/carousel3.jpg' %}" alt="bmt" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>United Nation Organization</h3>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <br>
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>What is the UN?</h1>
+    </div>
+    <div class="container-fluid" style="background: aqua">
+
+    <p style="background: orange">The United Nations (UN) is an international organization established on October 24, 1945, following the end of World War II. It was created to replace the ineffective League of Nations and is tasked with maintaining international peace and security, promoting social progress, better living standards, and human rights.</p>
+
+    <h3 style="background: brown">Key Features of the UN:</h3>
+    <ol style="background: green">
+        <li>
+            <strong>Membership:</strong> The UN is composed of 193 member states, with nearly every recognized sovereign state in the world being a member. Membership is open to all peace-loving states that accept the obligations outlined in the UN Charter.
+        </li>
+        <li>
+            <strong>Charter:</strong> The UN Charter serves as the organization's foundational document, outlining its purposes, principles, and structure. It establishes the main bodies of the UN, including the General Assembly, Security Council, Economic and Social Council, Trusteeship Council, International Court of Justice, and Secretariat.
+        </li>
+        <li>
+            <strong>Principles:</strong> The UN is guided by principles such as sovereignty, territorial integrity, and the peaceful resolution of disputes. It promotes respect for human rights, non-discrimination, and the rule of law.
+        </li>
+        <li>
+            <strong>Peacekeeping:</strong> One of the primary functions of the UN is to maintain international peace and security. The organization employs peacekeeping operations to help countries torn by conflict create conditions for lasting peace.
+        </li>
+        <li>
+            <strong>Development:</strong> The UN promotes economic and social development through various agencies and programs, including the United Nations Development Programme (UNDP) and the Sustainable Development Goals (SDGs), which aim to address global challenges such as poverty, inequality, and climate change.
+        </li>
+        <li>
+            <strong>Human Rights:</strong> The UN works to protect and promote human rights globally through mechanisms like the Universal Declaration of Human Rights and treaty bodies such as the Human Rights Council.
+        </li>
+        <li>
+            <strong>Humanitarian Assistance:</strong> The UN provides aid and assistance to countries and populations affected by natural disasters, conflicts, and other emergencies through agencies like the World Food Programme (WFP), United Nations High Commissioner for Refugees (UNHCR), and UNICEF.
+        </li>
+        <li>
+            <strong>International Law:</strong> The UN plays a central role in developing and promoting international law, including treaties and conventions on issues such as disarmament, environmental protection, and the rights of refugees.
+        </li>
+    </ol>
+
+    <h3 style="background: brown">Challenges:</h3>
+    <p style="background: yellow">The UN faces numerous challenges in fulfilling its mission, including geopolitical tensions, humanitarian crises, climate change, and the proliferation of weapons of mass destruction. Additionally, questions about the effectiveness and reform of the organization are ongoing topics of discussion among member states.</p>
+
+    <p style="background: yellow">Overall, the United Nations remains a critical forum for international cooperation, diplomacy, and collective action in addressing the complex challenges facing the world today.</p>
+</div>
+
+{% endblock %}
